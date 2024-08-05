@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videogames</title>
+  </head>
+  <body>
+    <h1>Videogames Collection</h1>
+    {% if videogames %}
+    <ul>
+      {% for videogame in videogames %}
+      <li>
+        {{videogame.title}}<br />
+        Rating:{{videogame.rating}}<br />
+        Released: {{videogame.release_date}}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h3>Your videogames collection is empty</h3>
+    {% endif %}
+  </body>
+</html>
